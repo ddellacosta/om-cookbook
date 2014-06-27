@@ -1,6 +1,8 @@
 # om-examples
 
-Small examples based on questions I've gotten on the CLJS mailing list, IRC, etc.  Feel free to make a pull request!
+Small, single-concept [Om](https://github.com/swannodette/om) examples based on questions I've gotten on the CLJS mailing list, IRC, etc.  Feel free to make a pull request!
+
+Don't forget to check out the [examples](https://github.com/swannodette/om/tree/master/examples) in Om too.
 
 Current versions:
 
