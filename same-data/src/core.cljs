@@ -9,13 +9,13 @@
 (defn item-comp
   [{pos :pos} owner]
   (om/component
-   (dom/li #js {:classes "item"}
+   (dom/li #js {:className "item"}
            (str "Item at position " pos))))
 
 (defn sep-comp
   [{pos :pos} owner]
   (om/component
-   (dom/li #js {:classes "sep"}
+   (dom/li #js {:className "sep"}
            (str "Separator at position " pos))))
 
 (defn resize-widget
@@ -23,7 +23,7 @@
   (reify
     om/IRenderState
     (render-state [_ state]
-      (apply dom/ul #js {:classes "items"}
+      (apply dom/ul #js {:className "items"}
              (map
               #(case (:type %)
                  :item (om/build item-comp %)
