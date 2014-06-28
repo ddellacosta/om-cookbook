@@ -30,8 +30,8 @@
                  :sep  (om/build sep-comp %))
               (sort-by :pos items))))))
 
-(def app-data (atom {:items [{:type :item :pos 1} {:type :sep :pos 2}
-                             {:type :item :pos 3} {:type :sep :pos 4}
-                             {:type :item :pos 5} {:type :sep :pos 6}]}))
+(def app-data {:items [{:type :item :pos 1} {:type :sep :pos 2}
+                       {:type :item :pos 3} {:type :sep :pos 4}
+                       {:type :item :pos 5} {:type :sep :pos 6}]})
 
 (om/root resize-widget app-data {:target (.getElementById js/document "root")})

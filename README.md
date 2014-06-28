@@ -15,6 +15,8 @@ Current versions:
   :plugins [[lein-cljsbuild "1.0.3"]]
 ```
 
+And React 0.9.0 in all examples for the time being.
+
 ## Examples
 
 ```bash
