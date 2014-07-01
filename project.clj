@@ -34,4 +34,12 @@
                 :output-dir "back-it-up/out"
                 :source-map true
                 :optimizations :none}}
+
+             {:id "datetimepicker"
+              :source-paths ["datetimepicker/src"]
+              :compiler {
+                :output-to "datetimepicker/main.js"
+                :output-dir "datetimepicker/out"
+                :source-map true
+                :optimizations :none}}
              ]})

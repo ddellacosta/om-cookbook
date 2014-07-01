@@ -32,12 +32,17 @@ $ lein cljsbuild once same-data-different-component
 
 Using two different components with the same data set, alternating based on a hash-map field value.
 
-
 ```bash
 $ lein cljsbuild once back-it-up
 ```
 
 Shows how to update both app-data (cursor) and local component state of a parent component from a child component using core.async.
+
+```bash
+$ lein cljsbuild once datetimepicker
+```
+
+An example of how to integrate Google Closure's [goog.ui.InputDatePicker](http://docs.closure-library.googlecode.com/git/class_goog_ui_InputDatePicker.html).
 
 
 ## License
