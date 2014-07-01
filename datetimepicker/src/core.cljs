@@ -52,8 +52,8 @@
 
     om/IDidMount
     (did-mount [_]
-      (let [dtp-el (.getElementById js/document "datetimepicker")]
-        (.decorate @datetimepicker dtp-el)))
+      (->> (.getElementById js/document "datetimepicker")
+           (.decorate @datetimepicker)))
 
     om/IWillUnmount
     (will-unmount [_]
