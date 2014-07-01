@@ -10,18 +10,18 @@
 
 (defn clicked!
   [child-msgs action]
-  (fn [_]
-    (put! child-msgs action)))
+  (fn [_] (put! child-msgs action)))
 
 (defn child
   [app-data owner]
   (om/component
    (html
-    [:div
-     [:button {:onClick (clicked! (om/get-state owner :child-msgs) :inc)}
-      "Click me to increment."]
-     [:button {:onClick (clicked! (om/get-state owner :child-msgs) :dec)}
-      "Click me to decrement."]])))
+    (let [child-msgs (om/get-state owner :child-msgs)]
+      [:div
+       [:button {:onClick (clicked! child-msgs :inc)}
+        "Click me to increment."]
+       [:button {:onClick (clicked! child-msgs :dec)}
+        "Click me to decrement."]]))))
 
 (defn parent
   [{clicked :clicked :as app-data} owner]
