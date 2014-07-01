@@ -55,6 +55,11 @@
       (let [dtp-el (.getElementById js/document "datetimepicker")]
         (.decorate @datetimepicker dtp-el)))
 
+    om/IWillUnmount
+    (will-unmount [_]
+      (.dispose @datetimepicker)
+      (reset! @datetimepicker nil))
+
     om/IRenderState
     (render-state [_ {:keys [selected-date] :as state}]
       (html
