@@ -44,6 +44,12 @@ $ lein cljsbuild once datetimepicker
 
 An example of how to integrate Google Closure's [goog.ui.InputDatePicker](http://docs.closure-library.googlecode.com/git/class_goog_ui_InputDatePicker.html).
 
+```bash
+$ lein cljsbuild once focus
+```
+
+Adapts [React's example for setting focus on an input field](http://facebook.github.io/react/docs/working-with-the-browser.html#refs-and-getdomnode) to Om, including a spurious re-render to show focus is unaffected.
+
 
 ## License
 
