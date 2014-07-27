@@ -43,14 +43,6 @@
                 :source-map true
                 :optimizations :none}}
 
-             {:id "mutation"
-              :source-paths ["mutation/src"]
-              :compiler {
-                :output-to "mutation/main.js"
-                :output-dir "mutation/out"
-                :source-map true
-                :optimizations :none}}
-
              {:id "focus"
               :source-paths ["focus/src"]
               :compiler {
