@@ -50,6 +50,12 @@ $ lein cljsbuild once focus
 
 Adapts [React's example for setting focus on an input field](http://facebook.github.io/react/docs/working-with-the-browser.html#refs-and-getdomnode) to Om, including a spurious re-render to show focus is unaffected.
 
+```bash
+$ lein cljsbuild once extend-cursor
+```
+
+Very basic (and silly) example of how to extend a Cursor type with your own protocol.
+
 
 ## License
 

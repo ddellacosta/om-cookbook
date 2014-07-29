@@ -50,4 +50,12 @@
                 :output-dir "focus/out"
                 :source-map true
                 :optimizations :none}}
+
+             {:id "extend-cursor"
+              :source-paths ["extend-cursor/src"]
+              :compiler {
+                :output-to "extend-cursor/main.js"
+                :output-dir "extend-cursor/out"
+                :source-map true
+                :optimizations :none}}
              ]})
