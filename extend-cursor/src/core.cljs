@@ -5,22 +5,31 @@
 
 (enable-console-print!)
 
-(defprotocol MapCursorSize (keyword-key-count [this]))
+(defprotocol CursorKeys
+  (keys' [this]))
 
 (extend-type om/MapCursor
-  MapCursorSize
-  (keyword-key-count [this] (count (filter keyword? (keys this)))))
+  CursorKeys
+  (keys' [this] (keys this)))
+
+(extend-type om/IndexedCursor
+  CursorKeys
+  (keys' [this] (range 0 (count this)))) ; treating the index as a type of key here
 
 (defn extend-cursor
-  [data owner]
+  [{:keys [indexedcursor mapcursor]} owner]
   (reify
     om/IRenderState
-    (render-state [_ {:keys [selected-date] :as state}]
+    (render-state [_ state]
       (html
-       [:div
-        [:div "MapCursor data: " (pr-str data)]
-        [:div "Keyword keys in MapCursor: " (keyword-key-count data)]]))))
+       [:table
+        [:thead
+         [:tr [:th "Cursor Type"] [:th "Cursor Value"] [:th "output of CursorKeys keys' fn"]]]
+        [:tbody
+         [:tr [:td "MapCursor"] [:td (pr-str mapcursor)] [:td (pr-str (keys' mapcursor))]]
+         [:tr [:td "IndexedCursor"] [:td (pr-str indexedcursor)] [:td (pr-str (keys' indexedcursor))]]]]))))
 
-(def cursor-data {:foo "foo" :bar "bar" "not-keyword" "hah, sneaky!"})
+(def cursor-data {:mapcursor {:foo "foo" :bar "bar" :baz "baz" :qux "qux"}
+                  :indexedcursor ["foo" "bar" "baz" "qux"]})
 
 (om/root extend-cursor cursor-data {:target (.getElementById js/document "root")})
