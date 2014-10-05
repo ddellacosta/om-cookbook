@@ -58,4 +58,12 @@
                 :output-dir "extend-cursor/out"
                 :source-map true
                 :optimizations :none}}
+
+             {:id "complex-selection"
+              :source-paths ["complex-selection/src"]
+              :compiler {
+                :output-to "complex-selection/main.js"
+                :output-dir "complex-selection/out"
+                :source-map true
+                :optimizations :none}}
              ]})
