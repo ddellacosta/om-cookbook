@@ -40,6 +40,7 @@
        [:div.elements
         {:id (str "elements-" key)}
         [:h3 (str "Elements Set " key)]
+        [:p (if selected (str "Currently selected element is " selected ".") "None selected.")]
         (om/build-all element elements {:state {:selected selected}
                                         :opts  {:select-el-chan select-el-chan}})]))))
 
