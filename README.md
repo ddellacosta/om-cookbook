@@ -57,6 +57,13 @@ $ lein cljsbuild once extend-cursor
 Very basic (and silly) example of how to extend a Cursor type with your own protocol.
 
 
+```bash
+$ lein cljsbuild once complex-selection
+```
+
+Example of how to select items in child components while recording and acting on those selections in a parent component (via Om state updates and core.async channels).
+
+
 ## License
 
 [MIT license](http://opensource.org/licenses/MIT)
