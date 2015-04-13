@@ -1,4 +1,7 @@
-# om-cookbook
+
+# You should refer to and contribute to the official Om cookbook here: https://github.com/omcljs/om-cookbook.  I'll leave this here for now, and port some of these over if any of them are appropriate.  Thanks!
+
+## om-cookbook
 
 Small, single-concept [Om](https://github.com/swannodette/om) example recipes based on questions I've gotten on the CLJS mailing list, IRC, etc.  Feel free to make a pull request!
 
